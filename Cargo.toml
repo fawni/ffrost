@@ -1,8 +1,10 @@
 [package]
 name = "ffrost"
-version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "simple program for calculating the total duration of a collection of media"
+version = "0.2.0"
+authors = ["obscurity <z@x4.pm>"]
+license = "ISC"
+repository = "https://github.com/x6r/ffrost"
 
 [dependencies]
