@@ -2,7 +2,7 @@
 name = "ffrost"
 edition = "2021"
 description = "simple program for calculating the total duration of a collection of media"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["obscurity <z@x4.pm>"]
 license = "ISC"
 repository = "https://github.com/x6r/ffrost"

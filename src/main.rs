@@ -8,7 +8,7 @@ fn main() {
     match total_duration {
         0 => println!("no accepted media files found"),
         _ => println!(
-            "{}:{}:{}",
+            "{:02}:{:02}:{:02}",
             ((total_duration / 60) / 60),
             ((total_duration / 60) % 60),
             (total_duration % 60)
