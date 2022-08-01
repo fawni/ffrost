@@ -1,8 +1,7 @@
 use std::{env, fs, process::Command};
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let path = if args.len() > 1 { &args[1] } else { "." };
+    let path = env::args().nth(1).unwrap_or(".".to_owned());
     let files = fs::read_dir(path).expect("could not read files in the current directory");
 
     let total_duration = calculate_total(files).unwrap();
