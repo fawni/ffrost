@@ -4,14 +4,14 @@ fn main() {
     let path = env::args().nth(1).unwrap_or_else(|| ".".to_owned());
     let files = fs::read_dir(path).expect("could not read files in the current directory");
 
-    let total_duration = calculate_total(files).unwrap();
+    let total_duration = calculate_total(files);
     match total_duration {
-        0 => println!("no accepted media files found"),
-        _ => println!(
+        None => println!("no accepted media files found"),
+        Some(duration) => println!(
             "{:02}:{:02}:{:02}",
-            ((total_duration / 60) / 60),
-            ((total_duration / 60) % 60),
-            (total_duration % 60)
+            ((duration / 60) / 60),
+            ((duration / 60) % 60),
+            (duration % 60)
         ),
     }
 }
@@ -46,5 +46,8 @@ fn calculate_total(directories: std::fs::ReadDir) -> Option<u32> {
         }
     }
 
-    Some(total_duration as u32)
+    match total_duration as u32 {
+        0 => None,
+        _ => Some(total_duration as u32),
+    }
 }
