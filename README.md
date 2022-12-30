@@ -8,10 +8,10 @@ simple program to calculate the total duration of a collection of media (ex: tv 
 
 ## installation
 
+### Build from source
+
 ```sh
-git clone https://github.com/x6r/ffrost.git
-cd ffrost
-cargo install --path .
+cargo install --git https://github.com/fawni/ffrost
 ```
 
 ## usage
@@ -19,3 +19,7 @@ cargo install --path .
 ```sh
 ffrost <path>
 ```
+
+## license
+
+[ISC](./LICENSE)

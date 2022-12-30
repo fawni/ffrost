@@ -5,6 +5,6 @@ description = "simple program for calculating the total duration of a collection
 version = "0.2.3"
 authors = ["obscurity <z@x4.pm>"]
 license = "ISC"
-repository = "https://github.com/x6r/ffrost"
+repository = "https://github.com/fawni/ffrost"
 
 [dependencies]
